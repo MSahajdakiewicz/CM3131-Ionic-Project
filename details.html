@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MusicBox</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+
+<!--STYLESHEET-->     
+  <link rel="stylesheet" href="main.css">
+
+<!--MENU CONTROLLER--> 
+  <script type="module">
+    import { menuController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.menuController = menuController;
+  </script>
+
+</head>
+
+<body>
+  <ion-app>
+    <ion-menu side="start" content-id="main-content">
+
+<!--SIDE MENU HEADER-->
+      <ion-header>
+        <ion-toolbar color="dark">
+          <ion-title slot="start">Menu</ion-title>
+          <ion-title slot="end"><img src="logo/album-logo-03.png" class="logo"></ion-title>
+        </ion-toolbar>
+      </ion-header>
+      
+<!--SIDE MENU LINKS--> 
+      <ion-content>
+        <ion-list>
+
+          <ion-item href="index.html" lines="full">
+            <ion-icon name="search" slot="start" color="warning"></ion-icon>
+            <ion-label color="light">Search</ion-label>
+          </ion-item>
+          
+          <ion-item href="collection.html" lines="full">
+            <ion-icon name="disc" slot="start" color="warning"></ion-icon>
+            <ion-label color="light">Collection</ion-label>
+          </ion-item>
+         
+          <ion-item href="favourites.html" lines="full">
+            <ion-icon name="heart" slot="start" color="warning"></ion-icon>
+            <ion-label color="light">Favourites</ion-label>
+          </ion-item>
+
+          <ion-item href="wishlist.html" lines="full">
+            <ion-icon name="star" slot="start" color="warning"></ion-icon>
+            <ion-label color="light">Wish List</ion-label>
+          </ion-item>
+        
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+<!--MAIN CONTENT--> 
+    <div class="ion-page" id="main-content">
+
+<!--HEADER--> 
+      <ion-header>
+        <ion-toolbar color="dark">
+
+        <!--Menu button-->  
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+
+        <!--Title-->
+          <ion-title>Album Details</ion-title>
+
+        <!--Back button-->
+          <ion-buttons slot="end">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+
+        </ion-toolbar>
+      </ion-header>
+
+<!--ALBUM INFO-->      
+      <ion-content>     
+        <ion-list>
+
+          <!--Cover Art-->   
+            <ion-item lines="none">
+                <img src="covers/The-Queen-is-Dead-cover.png" class="cover"/>
+            </ion-item>
+
+            <ion-item-group>
+
+            <!--Title-->   
+              <ion-item-divider>
+                <ion-label color="warning">Title</ion-label>
+              </ion-item-divider>
+    
+              <ion-item lines="none">
+                <ion-label color="light">The Queen Is Dead</ion-label>
+              </ion-item>
+
+            <!--Artist-->  
+              <ion-item-divider>
+                <ion-label color="warning">Artist</ion-label>
+              </ion-item-divider>
+    
+              <ion-item lines="none" >
+                <ion-label color="light">The Smiths</ion-label>
+              </ion-item>
+    
+            <!--Release date-->  
+              <ion-item-divider>
+                <ion-label color="warning">Release Date</ion-label>
+              </ion-item-divider>
+    
+              <ion-item lines="none">
+                <ion-label color="light">1986-06-23</ion-label>
+              </ion-item>
+
+            <!--Length-->  
+              <ion-item-divider>
+                <ion-label color="warning">Length</ion-label>
+              </ion-item-divider>
+    
+              <ion-item lines="none">
+                <ion-label color="light">37:04</ion-label>
+              </ion-item>
+
+            <!--Track list-->  
+              <ion-item-divider>
+                <ion-label color="warning">Track List:</ion-label>
+              </ion-item-divider>
+    
+              <ion-item lines="full">
+                <ion-badge>1</ion-badge>
+                <ion-label class="ion-text-wrap" color="light">The Queen Is Dead</ion-label>
+                <ion-text class="track-length" color="medium">6:24</ion-text>
+              </ion-item>
+
+              <ion-item lines="full">
+                <ion-badge>2</ion-badge>
+                <ion-label class="ion-text-wrap" color="light">Frankly, Mr. Shankly</ion-label>
+                <ion-text class="track-length" color="medium">2:19</ion-text>
+              </ion-item>
+
+              <ion-item lines="full">
+                <ion-badge>3</ion-badge>
+                <ion-label class="ion-text-wrap" color="light">I Know It’s Over</ion-label>
+                <ion-text class="track-length" color="medium">5:50</ion-text>
+              </ion-item>
+
+              <ion-item lines="full">
+                <ion-badge>4</ion-badge>
+                <ion-label class="ion-text-wrap" color="light">Never Had No One Ever</ion-label>
+                <ion-text class="track-length" color="medium">3:37</ion-text>
+              </ion-item>
+
+              <ion-item lines="full">
+                <ion-badge>5</ion-badge>
+                <ion-label class="ion-text-wrap" color="light">Cemetry Gates</ion-label>
+                <ion-text class="track-length" color="medium">2:41</ion-text>
+              </ion-item>
+
+              <ion-item lines="full">
+                <ion-badge>6</ion-badge>
+                <ion-label class="ion-text-wrap" color="light">Bigmouth Strikes Again</ion-label>
+                <ion-text class="track-length" color="medium">3:15</ion-text>
+              </ion-item>
+
+              <ion-item lines="full">
+                <ion-badge>7</ion-badge>
+                <ion-label class="ion-text-wrap" color="light">The Boy With the Thorn in His Side</ion-label>
+                <ion-text class="track-length" color="medium">3:17</ion-text>
+              </ion-item>
+
+              <ion-item lines="full">
+                <ion-badge>8</ion-badge>
+                <ion-label class="ion-text-wrap" color="light">Vicar in a Tutu</ion-label>
+                <ion-text class="track-length" color="medium">2:22</ion-text>
+              </ion-item>  
+
+              <ion-item lines="full">
+                <ion-badge>9</ion-badge>
+                <ion-label class="ion-text-wrap" color="light">There Is a Light That Never Goes Out</ion-label>
+                <ion-text class="track-length" color="medium">4:03</ion-text>
+              </ion-item>
+
+              <ion-item lines="full">
+                <ion-badge>10</ion-badge>
+                <ion-label class="ion-text-wrap" color="light">Some Girls Are Bigger Than Others</ion-label>
+                <ion-text class="track-length" color="medium">3:15</ion-text>
+              </ion-item>  
+
+            </ion-item-group>  
+
+        </ion-list>
+      </ion-content>
+
+    </div>
+  </ion-app>
+
+<!--MENU CONTROLLER SCRIPT-->  
+  <script>
+    async function openMenu() {
+      await menuController.open();
+    }
+  </script>
+
+<!--JAVASCRIPT-->
+  <script src="app.js"></script>
+
+</body>
+
+</html>

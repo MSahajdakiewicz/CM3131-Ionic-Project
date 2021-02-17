@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MusicBox</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+
+<!--STYLESHEET-->       
+  <link rel="stylesheet" href="main.css">
+
+<!--MENU CONTROLLER-->  
+  <script type="module">
+    import { menuController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.menuController = menuController;
+  </script>
+
+</head>
+
+<body>
+  <ion-app>
+    <ion-menu side="start" content-id="main-content">
+
+<!--SIDE MENU HEADER-->
+      <ion-header>
+        <ion-toolbar color="dark">
+          <ion-title slot="start">Menu</ion-title>
+          <ion-title slot="end"><img src="logo/album-logo-03.png" class="logo"></ion-title>
+        </ion-toolbar>
+      </ion-header>
+      
+<!--SIDE MENU LINKS-->        
+      <ion-content>
+        <ion-list>
+
+          <ion-item href="index.html" lines="full">
+            <ion-icon name="search" slot="start" color="warning"></ion-icon>
+            <ion-label color="light">Search</ion-label>
+          </ion-item>
+          
+          <ion-item href="collection.html" lines="full">
+            <ion-icon name="disc" slot="start" color="warning"></ion-icon>
+            <ion-label color="light">Collection</ion-label>
+          </ion-item>
+         
+          <ion-item href="favourites.html" lines="full">
+            <ion-icon name="heart" slot="start" color="warning"></ion-icon>
+            <ion-label color="light">Favourites</ion-label>
+          </ion-item>
+
+          <ion-item href="wishlist.html" lines="full" disabled="true">
+            <ion-icon name="star" slot="start" color="warning"></ion-icon>
+            <ion-label color="light">Wish List</ion-label>
+          </ion-item>
+        
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+<!--MAIN CONTENT--> 
+    <div class="ion-page" id="main-content">
+
+<!--HEADER-->         
+      <ion-header>
+        <ion-toolbar color="dark">
+          
+        <!--Menu button-->  
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+
+        <!--Title-->
+          <ion-title>Wish List</ion-title>
+
+        <!--Back button-->
+          <ion-buttons slot="end">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+
+        </ion-toolbar>
+      </ion-header>
+    
+    <ion-content>
+<!--LIST-->        
+      <ion-list>
+
+        <ion-item>
+        <!--Thumbnail cover art-->    
+          <ion-thumbnail slot="start">
+            <img src="covers/Beirut-no-no-no.png">
+          </ion-thumbnail>
+        <!--Label-->
+          <ion-label class="ion-text-wrap">
+            <p>BEIRUT</p>
+            <h2>No No No</h2>
+          </ion-label>
+        <!--Add to collection button-->  
+          <ion-buttons>
+            <ion-button slot="end">
+              <ion-icon name="add-circle" slot="icon-only" color="light"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+        <ion-item>
+        <!--Thumbnail cover art-->     
+          <ion-thumbnail slot="start">
+            <img src="covers/Favourite_Worst_Nightmare.jpg">
+          </ion-thumbnail>
+        <!--Label-->
+          <ion-label class="ion-text-wrap">
+            <p >ARCTIC MONKEYS</p>
+            <h2 >Favourite Worst Nightmare</h2>
+          </ion-label>
+        <!--Add to collection button-->  
+          <ion-buttons>
+            <ion-button slot="end">
+              <ion-icon name="add-circle" slot="icon-only" color="light"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+        <ion-item>
+        <!--Thumbnail cover art-->   
+          <ion-thumbnail slot="start">
+            <img src="covers/razzmatazz.jpg">
+          </ion-thumbnail>
+        <!--Label-->
+          <ion-label class="ion-text-wrap">
+            <p>I DON'T KNOW HOW BUT THEY FOUND ME</p>
+            <h2>Razzmatazz</h2>
+          </ion-label>
+        <!--Add to collection button-->  
+          <ion-buttons>
+            <ion-button slot="end">
+              <ion-icon name="add-circle" slot="icon-only" color="light"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+
+    </div>
+  </ion-app>
+
+<!--MENU CONTROLLER SCRIPT-->  
+  <script>
+    async function openMenu() {
+      await menuController.open();
+    }
+  </script>
+
+<!--JAVASCRIPT-->
+  <script src="app.js"></script>  
+
+</body>
+
+</html>

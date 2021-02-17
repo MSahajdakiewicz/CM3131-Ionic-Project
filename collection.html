@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MusicBox</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+
+<!--STYLESHEET-->    
+  <link rel="stylesheet" href="main.css">
+
+<!--MENU CONTROLLER-->
+  <script type="module">
+    import { menuController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.menuController = menuController;
+  </script>
+
+</head>
+
+<body>
+  <ion-app>
+    <ion-menu side="start" content-id="main-content">
+
+<!--SIDE MENU HEADER-->
+      <ion-header>
+        <ion-toolbar color="dark">
+          <ion-title slot="start">Menu</ion-title>
+          <ion-title slot="end"><img src="logo/album-logo-03.png" class="logo"></ion-title>
+        </ion-toolbar>
+      </ion-header>
+      
+<!--SIDE MENU LINKS-->      
+      <ion-content>
+        <ion-list>
+
+          <ion-item href="index.html" lines="full">
+            <ion-icon name="search" slot="start" color="warning"></ion-icon>
+            <ion-label color="light">Search</ion-label>
+          </ion-item>
+          
+          <ion-item href="collection.html" lines="full" disabled="true">
+            <ion-icon name="disc" slot="start" color="warning"></ion-icon>
+            <ion-label color="light">Collection</ion-label>
+          </ion-item>
+         
+          <ion-item href="favourites.html" lines="full">
+            <ion-icon name="heart" slot="start" color="warning"></ion-icon>
+            <ion-label color="light">Favourites</ion-label>
+          </ion-item>
+
+          <ion-item href="wishlist.html" lines="full">
+            <ion-icon name="star" slot="start" color="warning"></ion-icon>
+            <ion-label color="light">Wish List</ion-label>
+          </ion-item>
+        
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+<!--MAIN CONTENT-->
+    <div class="ion-page" id="main-content">
+
+<!--HEADER-->      
+      <ion-header>
+        <ion-toolbar color="dark">
+
+        <!--Menu button-->
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+
+        <!--Title-->
+          <ion-title>My Albums</ion-title>
+
+        <!--Back button-->  
+          <ion-buttons slot="end">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+
+        </ion-toolbar>
+      </ion-header>
+
+<!--TABS-->      
+      <ion-tabs>
+
+<!--SORT BY TIME TAB-->        
+      <ion-tab tab="Time">
+        
+      <!--Header placeholder-->
+        <ion-header translucent>
+          <ion-toolbar>
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+  
+      <!--Grid content-->  
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              
+            <!--Card-->  
+              <ion-card class="collection-card">
+              <!--Buttons-->  
+                <ion-buttons>
+                <!--Add to favourites button-->  
+                  <ion-button class="btn-heart">
+                    <ion-icon name="heart" slot="icon-only" color="danger"></ion-icon>
+                  </ion-button> 
+                <!--Delete button-->    
+                  <ion-button class="btn-trash">
+                    <ion-icon name="trash" slot="icon-only"></ion-icon>
+                  </ion-button> 
+                </ion-buttons>
+              <!--Cover art-->  
+                <a href="details.html"><img src="covers/The-Queen-is-Dead-cover.png"/></a>
+              <!--Card header-->  
+                <ion-card-header>
+                  <ion-card-subtitle>THE SMITHS</ion-card-subtitle>
+                  <ion-card-title color="warning">The Queen Is Dead</ion-card-title>
+                </ion-card-header>
+              </ion-card>
+
+            </ion-col>
+  
+            <ion-col size="6">
+                
+            <!--Card-->  
+              <ion-card class="collection-card">
+              <!--Buttons-->  
+                <ion-buttons>
+                <!--Add to favourites button-->  
+                  <ion-button class="btn-heart">
+                    <ion-icon name="heart" slot="icon-only" color="danger"></ion-icon>
+                  </ion-button> 
+                <!--Delete button-->      
+                  <ion-button class="btn-trash">
+                    <ion-icon name="trash" slot="icon-only"></ion-icon>
+                  </ion-button> 
+                </ion-buttons>
+              <!--Cover art-->    
+                <a href="#"><img src="covers/Unknown-Pleasures.jpg"/></a>
+              <!--Card header-->    
+                <ion-card-header>
+                  <ion-card-subtitle>JOY DIVISION</ion-card-subtitle>
+                  <ion-card-title color="warning">Unknown Pleasures</ion-card-title>
+                </ion-card-header>
+              </ion-card>
+
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="6">
+              
+            <!--Card-->   
+              <ion-card class="collection-card">
+              <!--Buttons-->    
+                <ion-buttons>
+                <!--Add to favourites button-->    
+                  <ion-button class="btn-heart">
+                    <ion-icon name="heart-outline" slot="icon-only" color="light"></ion-icon>
+                  </ion-button> 
+                <!--Delete button-->   
+                  <ion-button class="btn-trash">
+                    <ion-icon name="trash" slot="icon-only"></ion-icon>
+                  </ion-button> 
+                </ion-buttons>
+              <!--Cover art-->    
+                <a href="#"><img src="covers/everything-you-ve-come-to-expect.jpg"/></a>
+              <!--Card header-->    
+                <ion-card-header>
+                  <ion-card-subtitle>THE LAST SHADOW PUPPETS</ion-card-subtitle>
+                  <ion-card-title color="warning">Everything You've Come To Expect</ion-card-title>
+                </ion-card-header>
+              </ion-card>
+
+            </ion-col>
+  
+            <ion-col size="6">
+                
+            <!--Card-->  
+              <ion-card class="collection-card">
+              <!--Buttons-->  
+                <ion-buttons>
+                <!--Add to favourites button-->      
+                  <ion-button class="btn-heart">
+                    <ion-icon name="heart" slot="icon-only" color="danger"></ion-icon>
+                  </ion-button> 
+                <!--Delete button-->    
+                  <ion-button class="btn-trash">
+                    <ion-icon name="trash" slot="icon-only"></ion-icon>
+                  </ion-button> 
+                </ion-buttons>
+              <!--Cover art-->  
+                <a href="#"><img src="covers/The_Age_of_the_Understatement.png"/></a>
+              <!--Card header-->  
+                <ion-card-header>
+                  <ion-card-subtitle>THE LAST SHADOW PUPPETS</ion-card-subtitle>
+                  <ion-card-title color="warning">The Age Of The Understatement</ion-card-title>
+                </ion-card-header>
+              </ion-card>
+
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+      </ion-content>
+    </ion-tab>
+  
+<!--SORT BY ARTIST TAB-->        
+      <ion-tab tab="Artists">
+        
+      <!--Header placeholder-->
+        <ion-header translucent>
+          <ion-toolbar>
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+
+      <!--Grid content-->  
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+
+            <!--Card-->  
+              <ion-card class="collection-card">
+              <!--Buttons-->  
+                <ion-buttons>
+                <!--Add to favourites button-->  
+                  <ion-button class="btn-heart">
+                    <ion-icon name="heart" slot="icon-only" color="danger"></ion-icon>
+                  </ion-button> 
+                <!--Delete button-->      
+                  <ion-button class="btn-trash">
+                    <ion-icon name="trash" slot="icon-only"></ion-icon>
+                  </ion-button> 
+                </ion-buttons>
+              <!--Cover art-->    
+                <a href="#"><img src="covers/Unknown-Pleasures.jpg"/></a>
+              <!--Card header-->    
+                <ion-card-header>
+                  <ion-card-subtitle>JOY DIVISION</ion-card-subtitle>
+                  <ion-card-title color="warning">Unknown Pleasures</ion-card-title>
+                </ion-card-header>
+              </ion-card>
+
+            </ion-col>
+  
+            <ion-col size="6">
+
+            <!--Card-->   
+              <ion-card class="collection-card">
+              <!--Buttons-->    
+                <ion-buttons>
+                <!--Add to favourites button-->    
+                  <ion-button class="btn-heart">
+                    <ion-icon name="heart-outline" slot="icon-only" color="light"></ion-icon>
+                  </ion-button> 
+                <!--Delete button-->   
+                  <ion-button class="btn-trash">
+                    <ion-icon name="trash" slot="icon-only"></ion-icon>
+                  </ion-button> 
+                </ion-buttons>
+              <!--Cover art-->    
+                <a href="#"><img src="covers/everything-you-ve-come-to-expect.jpg"/></a>
+              <!--Card header-->    
+                <ion-card-header>
+                  <ion-card-subtitle>THE LAST SHADOW PUPPETS</ion-card-subtitle>
+                  <ion-card-title color="warning">Everything You've Come To Expect</ion-card-title>
+                </ion-card-header>
+              </ion-card>
+              
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="6">
+
+            <!--Card-->  
+              <ion-card class="collection-card">
+              <!--Buttons-->  
+                <ion-buttons>
+                <!--Add to favourites button-->      
+                  <ion-button class="btn-heart">
+                    <ion-icon name="heart" slot="icon-only" color="danger"></ion-icon>
+                  </ion-button> 
+                <!--Delete button-->    
+                  <ion-button class="btn-trash">
+                    <ion-icon name="trash" slot="icon-only"></ion-icon>
+                  </ion-button> 
+                </ion-buttons>
+              <!--Cover art-->  
+                <a href="#"><img src="covers/The_Age_of_the_Understatement.png"/></a>
+              <!--Card header-->  
+                <ion-card-header>
+                  <ion-card-subtitle>THE LAST SHADOW PUPPETS</ion-card-subtitle>
+                  <ion-card-title color="warning">The Age Of The Understatement</ion-card-title>
+                </ion-card-header>
+              </ion-card>
+
+            </ion-col>
+  
+            <ion-col size="6">
+
+            <!--Card-->  
+              <ion-card class="collection-card">
+              <!--Buttons-->  
+                <ion-buttons>
+                <!--Add to favourites button-->  
+                  <ion-button class="btn-heart">
+                    <ion-icon name="heart" slot="icon-only" color="danger"></ion-icon>
+                  </ion-button> 
+                <!--Delete button-->    
+                  <ion-button class="btn-trash">
+                    <ion-icon name="trash" slot="icon-only"></ion-icon>
+                  </ion-button> 
+                </ion-buttons>
+              <!--Cover art-->  
+                <a href="details.html"><img src="covers/The-Queen-is-Dead-cover.png"/></a>
+              <!--Card header-->  
+                <ion-card-header>
+                  <ion-card-subtitle>THE SMITHS</ion-card-subtitle>
+                  <ion-card-title color="warning">The Queen Is Dead</ion-card-title>
+                </ion-card-header>
+              </ion-card>
+
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+      </ion-content>
+    </ion-tab>
+  
+<!--SORT BY TITLE TAB-->        
+      <ion-tab tab="A-Z">
+        
+      <!--Header placeholder-->
+        <ion-header translucent>
+          <ion-toolbar>
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+
+      <!--Grid content-->  
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+
+            <!--Card-->   
+              <ion-card class="collection-card">
+              <!--Buttons-->    
+                <ion-buttons>
+                <!--Add to favourites button-->    
+                  <ion-button class="btn-heart">
+                    <ion-icon name="heart-outline" slot="icon-only" color="light"></ion-icon>
+                  </ion-button> 
+                <!--Delete button-->   
+                  <ion-button class="btn-trash">
+                    <ion-icon name="trash" slot="icon-only"></ion-icon>
+                  </ion-button> 
+                </ion-buttons>
+              <!--Cover art-->    
+                <a href="#"><img src="covers/everything-you-ve-come-to-expect.jpg"/></a>
+              <!--Card header-->    
+                <ion-card-header>
+                  <ion-card-subtitle>THE LAST SHADOW PUPPETS</ion-card-subtitle>
+                  <ion-card-title color="warning">Everything You've Come To Expect</ion-card-title>
+                </ion-card-header>
+              </ion-card>
+
+            </ion-col>
+  
+            <ion-col size="6">
+            
+            <!--Card-->  
+              <ion-card class="collection-card">
+              <!--Buttons-->  
+                <ion-buttons>
+                <!--Add to favourites button-->      
+                  <ion-button class="btn-heart">
+                    <ion-icon name="heart" slot="icon-only" color="danger"></ion-icon>
+                  </ion-button> 
+                <!--Delete button-->    
+                  <ion-button class="btn-trash">
+                    <ion-icon name="trash" slot="icon-only"></ion-icon>
+                  </ion-button> 
+                </ion-buttons>
+              <!--Cover art-->  
+                <a href="#"><img src="covers/The_Age_of_the_Understatement.png"/></a>
+              <!--Card header-->  
+                <ion-card-header>
+                  <ion-card-subtitle>THE LAST SHADOW PUPPETS</ion-card-subtitle>
+                  <ion-card-title color="warning">The Age Of The Understatement</ion-card-title>
+                </ion-card-header>
+              </ion-card>
+
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="6">
+
+            <!--Card-->  
+              <ion-card class="collection-card">
+              <!--Buttons-->  
+                <ion-buttons>
+                <!--Add to favourites button-->  
+                  <ion-button class="btn-heart">
+                    <ion-icon name="heart" slot="icon-only" color="danger"></ion-icon>
+                  </ion-button> 
+                <!--Delete button-->    
+                  <ion-button class="btn-trash">
+                    <ion-icon name="trash" slot="icon-only"></ion-icon>
+                  </ion-button> 
+                </ion-buttons>
+              <!--Cover art-->  
+                <a href="details.html"><img src="covers/The-Queen-is-Dead-cover.png"/></a>
+              <!--Card header-->  
+                <ion-card-header>
+                  <ion-card-subtitle>THE SMITHS</ion-card-subtitle>
+                  <ion-card-title color="warning">The Queen Is Dead</ion-card-title>
+                </ion-card-header>
+              </ion-card>
+            </ion-col>
+  
+            <ion-col size="6">
+
+            <!--Card-->  
+              <ion-card class="collection-card">
+              <!--Buttons-->  
+                <ion-buttons>
+                <!--Add to favourites button-->  
+                  <ion-button class="btn-heart">
+                    <ion-icon name="heart" slot="icon-only" color="danger"></ion-icon>
+                  </ion-button> 
+                <!--Delete button-->      
+                  <ion-button class="btn-trash">
+                    <ion-icon name="trash" slot="icon-only"></ion-icon>
+                  </ion-button> 
+                </ion-buttons>
+              <!--Cover art-->    
+                <a href="#"></a><img src="covers/Unknown-Pleasures.jpg"/></a>
+              <!--Card header-->    
+                <ion-card-header>
+                  <ion-card-subtitle>JOY DIVISION</ion-card-subtitle>
+                  <ion-card-title color="warning">Unknown Pleasures</ion-card-title>
+                </ion-card-header>
+              </ion-card>
+
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+      </ion-content>
+    </ion-tab>
+  
+<!--TAB BAR-->    
+        <ion-tab-bar slot="bottom">
+
+          <ion-tab-button tab="Time">
+            <ion-label>Time</ion-label>
+            <ion-icon name="time"></ion-icon>
+          </ion-tab-button>
+
+          <ion-tab-button tab="Artists">
+            <ion-label>Artists</ion-label>
+            <ion-icon name="people-circle"></ion-icon>
+          </ion-tab-button>
+
+          <ion-tab-button tab="A-Z" >
+            <ion-icon name="text"></ion-icon>
+              <ion-label>A-Z</ion-label>
+          </ion-tab-button>
+
+        </ion-tab-bar>
+
+      </ion-tabs>
+    </div>
+  </ion-app>
+
+<!--MENU CONTROLLER SCRIPT-->  
+  <script>
+    async function openMenu() {
+      await menuController.open();
+    }
+  </script>
+
+<!--JAVASCRIPT-->
+  <script src="app.js"></script> 
+
+</body>
+
+</html>

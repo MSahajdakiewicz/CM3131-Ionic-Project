@@ -1,0 +1,123 @@
+/*--GENERAL STYLING--*/
+    :root {
+        --ion-safe-area-top: 10px;
+        --ion-background-color: #191919;
+        --ion-border-color: #333333;
+        --ion-backdrop-color: #92949c;
+    }
+
+    ion-back-button {
+        display: block;
+    }
+
+    ion-tab-button {
+        --color-selected: #ffc409;
+    }
+
+    h2 {
+        color: #ffc409;  
+    }   
+
+
+/*--SEARCHBAR STYLING--*/
+    .searchbar-input.sc-ion-searchbar-md {
+        border-radius: 25px;
+        background-color: #333333;
+        color: white;
+    }
+    
+    .searchbar-search-icon {
+        --icon-color: #ffc409;
+    }
+
+    .searchbar-clear-icon {
+        color: white;
+    }
+
+
+/*--CARD STYLING--*/
+    ion-card {
+        width: 80%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #262626a1;
+    }
+
+    ion-card-header {
+        padding-bottom: 0;
+    }
+
+    .collection-card {
+        width: 100%;
+        height: 95%;
+    }
+
+    .collection-card ion-card-subtitle {
+        font-size: smaller;
+    }
+
+    .collection-card ion-card-title {
+        font-size: 15px;
+    }
+
+    .favourite-card ion-card-header {
+        padding-bottom: 15px;
+    }
+
+
+/*--FAVOURITE/DELETE ICONS STYLING--*/
+    .favourite-card .btn-heart {
+        left: 0;
+        top: 0;
+    }
+
+    .btn-heart, .btn-trash {
+        position: absolute;
+        top: -10px;
+        padding: auto;
+        margin: auto;
+    }
+
+    .btn-heart {
+        left: -10px;
+    }
+
+    .btn-trash {
+        right: -10px;
+    } 
+
+
+/*--IMAGES STYLING--*/
+    img {
+        width: 100%;
+    }
+
+    .logo {
+        width: 45px;
+        height: 40px;
+    }       
+
+
+/*--DETAILS PAGE STYLING--*/
+    .cover {
+        width: 90%;
+        padding: auto;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    ion-item-divider {
+        margin-top: 10px;
+        background-color: #262626a1;
+    }
+
+    ion-badge {
+        margin-right: 20px;
+        background-color: #262626a1;
+    }
+
+    .track-length {
+        margin-left: 20px;
+    }
